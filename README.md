@@ -1,4 +1,3 @@
-
 # HNK Solutions
 
 ## Changes
@@ -15,7 +14,12 @@ I did not finish the accordian. the accordian works, but i did not make it respo
 
 I did not finish the "Why Choose us Section. I did not make the image as responsive as I wanted to.
 
-i did not finish the hero section. The image was not responsive
+I did not finish the hero section. The image was not responsive
 
 The navigation is responsive, but i was not able to finish it so the hamburger menu is animated, but does not work
 
+## Changes after submission
+
+I changed the website to make it responsive throughout the whole website. This includes the accordian, and the why choose us section
+
+I finished the navigation, so that it now works

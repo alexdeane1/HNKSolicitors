@@ -1,15 +1,15 @@
-<div class="flex sm:min-h-[430px] gap-4 swiper-slide matchHeight bg-primary p-[50px]">
+<div class="flex sm:min-h-[430px] lg:flex-row flex-col gap-4 swiper-slide matchHeight bg-primary p-[50px]">
     <div class="h-full flex flex-wrap flex-col justify-between gap-3">
-        <div>
+        <div class="mx-auto">
             <p class="text-3xl font-bold sm:w-[230px]">{{ title }}</p>
             <p class="text-lg sm:w-[285px] pt-[15px] font-semibold">
                 {{ content }}   
             </p>
         </div>
-        <a class="flex text-xl font-bold items-center" href="#">
+        <a class="flex mx-auto text-xl font-bold items-center" href="#">
             <span class="pr-2">Find Out More</span>
             <svg class="h-4 pr-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path data-name="Arrow Back" d="M0 9h12.2l-5.6 5.6L8 16l8-8-8-8-1.4 1.4L12.2 7H0Z" fill="#fff"/></svg>
         </a>
     </div>
-    <img class="ml-auto" src="{{ site.theme.link }}{{ image }}" alt="">
+    <img class="mx-auto mt-auto lg:mt-0 lg:ml-auto" src="{{ site.theme.link }}{{ image }}" alt="">
 </div>

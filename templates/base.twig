@@ -8,29 +8,33 @@
 
 <body class="{{body_class}} font-muli" data-template="base.twig">
 	<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
-	<header class="pt-8 h-[142.5px]">
+	<header class="pt-8 z-50 h-[142.5px] sticky top-0 bg-white">
 		{% block header %}
 		<div x-data="{ open: false }" class="w-[90vw] mx-auto flex items-center">
-			<a class="" href="{{site.url}}" rel="home"><img class="h-20 pr-20" src="{{ site.theme.link }}/resources/img-svg/logo.svg" alt=""></a>
-
+			<a class="mr-20" href="{{site.url}}" rel="home"><img class="h-20" src="{{ site.theme.link }}/resources/img-svg/logo.svg" alt=""></a>
 			<button class="transition-all ml-auto 3xl:ml-0 duration-500 w-10 h-10 relative mr-6 xs:mr-12 focus:outline-none 3xl:hidden hamburger" @click="open = !open">
 				<span class="sr-only">Open main menu</span>
-				<div class="block w-5 absolute xl:relative left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+				<div class="block w-5 absolute xl:relative left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
 				</div>
 			</button>
-
-			 <nav id="nav-main" class="font-semibold 3xl:flex flex-col w-full justify-center top-[142.5px] xl:top-auto absolute xl:relative hidden" role="navigation"> 
-				{% include "menu.twig" with {'items': menu.get_items} %}
-			</nav><!-- #nav -->
-
-			<div class="hidden 3xl:contents">
-				<div class="3xl:ml-auto flex gap-x-[25px] items-center">
+			<div class="font-semibold w-[950px] 3xl:flex flex-col hidden">
+				<nav id="nav-main"  role="navigation"> 
+					{% include "menu.twig" with {'items': menu.get_items} %}
+				</nav><!-- #nav -->
+			</div>
+			<div class="hidden 3xl:flex ">
+				<div class="xl:ml-auto w-[505px] flex gap-x-[25px] items-center">
 					<p class="text-lg font-semibold">Call us now on: <span class="text-[22px] font-bold">0151 668 0810</span></p>
 					<button class="w-[172px] h-[51px] bg-primary font-bold text-base text-white">ENQUIRE NOW</button>
 				</div>
+			</div>
+			<div :class="open == false ? 'translate-x-[-100vw] duration-300' : 'translate-x-0 duration-700'" class="fixed flex tranistion-all w-screen h-[calc(100vh-142.5px)] bottom-0 left-0 bg-[#F0F0F0] z-50">
+				<nav id="nav-main" class=" mx-auto text-center leading-10 pt-4 text-2xl text-black" role="navigation"> 
+					{% include "menu.twig" with {'items': menu.get_items} %}
+				</nav><!-- #nav -->
 			</div>
 		</div>
 		{% endblock %}

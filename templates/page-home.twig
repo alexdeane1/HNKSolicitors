@@ -14,7 +14,7 @@
 				</p>
 				<button class="btn-primary w-full xl:w-auto">Find Out More</button>
 			</div>
-			<div class="w-[600px] mt-auto xl:w-[820px] h-full mx-auto xl:ml-auto">
+			<div class="w-[600px] xl:w-[820px] h-full mx-auto xl:ml-auto">
 				<img src="{{ site.theme.link }}/resources/img-svg/heroImage.png" alt="">
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 				<div class="flex justify-center h-full items-center">
                     <p class="text-2xl xl:text-3xl 3xl:text-[40px] font-bold">How Do I Claim?</p>
                 </div>
-				<div class="flex justify-center h-full items-center ">
+				<div class="flex justify-center text-center h-full items-center ">
                     <p class="text-xl xl:text-2xl 3xl:text-3xl w-[432px]">For more information on how to claim please click this button</p>
                 </div>
 				<div class="flex justify-center h-full items-center">
@@ -134,7 +134,7 @@
 			</div>
 		</div>
 		<div class="!ml-[8vw] swiper">
-			<div class="gap-8 ml-24 text-white swiper-wrapper ">
+			<div class="text-white swiper-wrapper ">
 				{% include '/partial/slide.twig' with 
 					{'title': 'Fresh Approach',
 					'content': 'HNK Solicitors demonstrate our progressive and proactive approach in every case we handle. Our main aim is to ensure every client we represent is happy with the service provided and the outcome of their case.',
@@ -224,9 +224,9 @@
 		</div>
 	</section>
 	<section class="bg-primary">
-		<div class="sm:w-5/6 mx-auto flex h-full text-white">
-			<div class="py-20 md:py-24 xl:mx-[90px] mx-12 flex-wrap xl:flex-nowrap inline-flex w-full xl:gap-x-[60px] border-b-white border-b-4">
-				<div class="w-full xl:w-[652px] flex flex-col text-center xl:text-left">
+		<div class="sm:w-5/6 mx-auto flex h-full text-white"> {# fix this grid stuiff #}
+			<div class="py-20 md:py-24 xl:mx-[90px] mx-12 grid lg:grid-cols-2 w-full xl:gap-x-[60px] border-b-white border-b-4">
+				<div class="w-full flex flex-col text-center xl:text-left">
 					<p class="font-roboto text-6xl">Why Choose us?</p>
 					<p class="text-xl font-semibold pt-4">
 						HNK Solicitors specialise in a wide variety of civil litigation cases. 
@@ -242,7 +242,7 @@
 					</p>
 					<button class="w-[220px] mx-auto xl:mx-0 mb-8 h-[60px] text-xl bg-white font-bold text-primary mt-5 md:mt-10">Claim Now</button>
 				</div>
-				<img class="mx-auto w-full 2xl:ml-auto" src="{{ site.theme.link }}/resources/img-svg/whoChooseUs.png" alt="">
+				<img class="mx-auto w-full object-cover 2xl:ml-auto" src="{{ site.theme.link }}/resources/img-svg/whoChooseUs.png" alt="">
 			</div>
 		</div>
 		<div class="w-5/6 mx-auto flex pt-[87.5px] pb-[100px] text-white">

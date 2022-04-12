@@ -1,5 +1,5 @@
 {% if menu %}
-	<ul class="3xl:flex flex-none gap-x-8">
+	<ul class="3xl:flex w-full flex-none gap-x-8">
 	{% for item in items %}
 		<li class="{{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
