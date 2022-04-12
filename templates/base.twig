@@ -10,14 +10,27 @@
 	<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
 	<header class="pt-8 h-[142.5px]">
 		{% block header %}
-		<div class="w-5/6 mx-auto flex items-center">
+		<div x-data="{ open: false }" class="w-[90vw] mx-auto flex items-center">
 			<a class="" href="{{site.url}}" rel="home"><img class="h-20 pr-20" src="{{ site.theme.link }}/resources/img-svg/logo.svg" alt=""></a>
-			<nav id="nav-main" class="font-semibold" role="navigation">
+
+			<button class="transition-all ml-auto  duration-500 w-10 h-10 relative mr-6 xs:mr-12 focus:outline-none 3xl:hidden hamburger" @click="open = !open">
+				<span class="sr-only">Open main menu</span>
+				<div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
+					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
+				</div>
+			</button>
+
+			 <nav id="nav-main" class="font-semibold flex flex-col w-full justify-center top-[142.5px] absolute {# hidden 3xl:block #}" role="navigation"> 
 				{% include "menu.twig" with {'items': menu.get_items} %}
 			</nav><!-- #nav -->
-			<div class="ml-auto flex gap-x-[25px] items-center">
-				<p class="text-lg font-semibold">Call us now on: <span class="text-[22px] font-bold">0151 668 0810</span></p>
-				<button class="w-[172px] h-[51px] bg-primary font-bold text-base text-white">ENQUIRE NOW</button>
+
+			<div class="hidden 3xl:contents">
+				<div class="3xl:ml-auto flex gap-x-[25px] items-center">
+					<p class="text-lg font-semibold">Call us now on: <span class="text-[22px] font-bold">0151 668 0810</span></p>
+					<button class="w-[172px] h-[51px] bg-primary font-bold text-base text-white">ENQUIRE NOW</button>
+				</div>
 			</div>
 		</div>
 		{% endblock %}
@@ -39,6 +52,7 @@
 	{{ function('wp_footer') }}
 	{% endblock %}
 	<script src="{{ site.theme.link }}/public/js/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
 
 </html>
