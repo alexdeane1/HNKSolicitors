@@ -5,6 +5,8 @@
 
 I changed the view width on the header to 90 instead of the design so that I could make the hamburger menu show at a lesser width.
 
+On the sections with the questions like "Have you had a slip, trip or fall?", I was not sure what the boxes where. I assumed they would be links and not dropdown boxes.
+
 ## Things I didnt finish
 
 There are a few things I did not finish in time
