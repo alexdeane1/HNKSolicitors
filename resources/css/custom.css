@@ -1,0 +1,4 @@
+.btn-primary{
+    @apply text-xl bg-white font-bold text-primary;
+    padding: 18px 42px;
+}
