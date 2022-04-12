@@ -575,6 +575,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-6 {
   margin-left: 1.5rem;
 }
+.ml-48 {
+  margin-left: 12rem;
+}
+.ml-32 {
+  margin-left: 8rem;
+}
+.ml-24 {
+  margin-left: 6rem;
+}
 .block {
   display: block;
 }
@@ -957,6 +966,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-\[15px\] {
   padding-top: 15px;
 }
+.pl-48 {
+  padding-left: 12rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1284,6 +1296,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 @media (min-width: 1280px) {
 
+  .xl\:relative {
+    position: relative;
+  }
+
+  .xl\:top-auto {
+    top: auto;
+  }
+
   .xl\:mx-\[90px\] {
     margin-left: 90px;
     margin-right: 90px;
@@ -1308,6 +1328,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:mr-5 {
     margin-right: 1.25rem;
+  }
+
+  .xl\:flex {
+    display: flex;
   }
 
   .xl\:h-\[257px\] {

@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 $('.matchHeight').matchHeight({ property: 'min-height' });
 
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 2.2,
+    slidesPerView: 1.25,
     spaceBetween: 32,
     navigation: {
         nextEl: '.swiper-button-next',

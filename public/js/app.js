@@ -25,7 +25,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.matchHeight').matchHeight({
   property: 'min-height'
 });
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"]('.swiper', {
-  slidesPerView: 2.2,
+  slidesPerView: 1.25,
   spaceBetween: 32,
   navigation: {
     nextEl: '.swiper-button-next',

@@ -15,14 +15,14 @@
 
 			<button class="transition-all ml-auto  duration-500 w-10 h-10 relative mr-6 xs:mr-12 focus:outline-none 3xl:hidden hamburger" @click="open = !open">
 				<span class="sr-only">Open main menu</span>
-				<div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+				<div class="block w-5 absolute xl:relative left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
 					<span aria-hidden="true" class="block absolute h-[3.2px] w-8 bg-current transform transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
 				</div>
 			</button>
 
-			 <nav id="nav-main" class="font-semibold flex flex-col w-full justify-center top-[142.5px] absolute {# hidden 3xl:block #}" role="navigation"> 
+			 <nav id="nav-main" class="font-semibold flex flex-col w-full justify-center top-[142.5px] xl:top-auto absolute xl:relative hidden 3xl:block" role="navigation"> 
 				{% include "menu.twig" with {'items': menu.get_items} %}
 			</nav><!-- #nav -->
 
